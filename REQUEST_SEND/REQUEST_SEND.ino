@@ -2,7 +2,7 @@
 #include <ESP8266Ping.h>
 #include <WiFiClientSecure.h>
 #include <ESP8266Ping.h>
-#include <PubSubClient.h> 
+
 const char* ssid     = "SSID";
 const int httpsPort = 443;
 
@@ -17,9 +17,7 @@ const char* host = "host";
 void setup() {
   Serial.begin(115200);
   delay(100);
-   pubclient.setClient(wclient);
-  pubclient.setServer(mqtt_server, mqtt_port);
-
+  
   // We start by connecting to a WiFi network
   Serial.println();
   Serial.println();
